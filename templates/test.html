@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <style type="text/css">
+
+
+.filter-main{
+  display: flex;
+  gap: 72px;
+  background-color:#fff;
+  padding-bottom:40px;
+    width: fit-content;
+  padding:10px 55px 25px 55px;
+  border-radius:17px;
+
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+
+}
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стилизуем кастомный чекбокс */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #EEEEEE;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Состояние чекбокса, когда он активен */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #4caf50; /* Цвет чекбокса, когда он выбран */
+}
+
+/* Добавляем галочку при активации */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Показ галочки при активном состоянии */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+.chekbox-column{
+  font-family: Montserrat, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+h1{
+  font-size: 24px;
+  font-weight: 600;
+}
+p{
+  font-size: 16px;
+  font-weight: 200;
+}
+  
+
+
+  </style>
+</head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <section class="filter-main">
+      <div class="chekbox-column">
+        <h1>Наименование</h1>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+    </div>
+
+          <div class="chekbox-column">
+        <h1>Наименование</h1>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+    </div>
+
+          <div class="chekbox-column">
+        <h1>Наименование</h1>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox"> 
+          <span class="checkmark"></span>
+          Наименование
+        </label>
+    </div>
+
+</section>
+</body>
+</html>

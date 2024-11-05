@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/products.css">
+
+</head>
+<body>
+
+          <div style="display:flex; justify-content:center;"><h2 style="color:#E1C063;">КАТАЛОГ ПРОДУКЦИИ</h2></div>
+<!--          <div class="products-container">-->
+<!--              <div class="products-container">-->
+<!--                  <img style="width:100%;height:177.23px;" src="static/salmon.png">-->
+<!--                  <p>Лосось</p>-->
+<!--              </div>-->
+<!--          </div>-->
+          <section class="salmon-gallery">
+          <div class="gallery-row">
+
+
+            {% for key,i in goods.items() %}
+            <article onclick="window.location.href='/category_{{key}}'" class="salmon-card">
+              <img src="{{i.pict}}" alt="Salmon dish" class="salmon-image" loading="lazy">
+              <h2 class="salmon-title">{{key}}</h2>
+            </article>
+             {% endfor %}
+          </div>
+          </section>
+
+
+</body>
+
+</html>

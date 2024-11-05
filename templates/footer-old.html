@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <link rel="stylesheet" href="static\style.css"> -->
+<!--    <link rel="stylesheet" href="static\footer.css">-->
+<style>
+    *{
+        background:0;
+    }
+      .footer-container {
+    border-radius: 0;
+    display: flex;
+    max-width: 753px;
+    flex-direction: column;
+    align-items: center;
+justify-content: center; /* Центрирование по вертикали */
+    margin: 100px auto; /* Центрирование по горизонтали */
+  }
+
+  .logo2{
+    width: 150px;
+    height: 150px ;
+    border-radius: 50%;
+
+  }
+
+    .footer-company-name {
+        color: #000;
+    margin-top: 24px;
+    font: 600 36px Montserrat, sans-serif;
+  }
+  .copyright {
+    color: #8F9996;
+    font: 100 16px Roboto, sans-serif;
+  }
+  .footer-content {
+    align-self: stretch;
+    margin-top: 17px;
+    width: 100%;
+  }
+  .footer-columns {
+    gap: 20px;
+    display: flex;
+  }
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .footer-column-right {
+    width: 60%;
+    margin-left: 20px;
+  }
+  .footer-links {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #8F9996;
+    font: 300 23px Roboto, sans-serif;
+    text-decoration: none;
+  }
+  .links-row {
+    display: flex;
+    gap: 34px;
+  }
+  .footer-link {
+    flex-grow: 1;
+    white-space: nowrap;
+        width: 150px;
+    border:0;
+    font-size:24px;
+    text-decoration: none;
+    color: #8F9996;
+  }
+  .social-icons {
+    align-self: flex-start;
+    display: flex;
+    margin-top: 35px;
+    gap: 2px;
+  }
+  .image-gallery {
+    display: flex;
+    gap: 38px;
+  }
+  .main-image {
+    aspect-ratio: 1.02;
+    object-fit: contain;
+    width: 98px;
+    align-self: flex-start;
+    margin-left: -150px;
+  }
+  .image-wrapper {
+    display: flex;
+    gap: 2px;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .rounded-image {
+    aspect-ratio: 1.01;
+    object-fit: contain;
+    width: 97px;
+    border-radius: 28px;
+    align-self: flex-start;
+  }
+  .wide-image {
+    aspect-ratio: 1.73;
+    object-fit: contain;
+    width: 171px;
+    max-width: 100%;
+  }
+  @media (max-width: 991px) {
+    .footer-content {
+      max-width: 100%;
+    }
+
+    .footer-columns {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .footer-column {
+      width: 100%;
+    }
+
+    .footer-links {
+      margin-top: 29px;
+    }
+
+    .links-row {
+      margin-right: 5px;
+    }
+
+    .social-icons {
+      margin-left: 9px;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <footer class="footer-container">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a5cd5ecaebc515612f58ec8fb243382f094a4500b6786f6ae3ec3c4d7143dda?placeholderIfAbsent=true&apiKey=ce95c56d116b4d5490c97905b69b5952" class="logo2" alt="Fish to Business logo" />
+        <h2 class="footer-company-name">FISH TO BUSINESS</h2>
+        <p class="copyright">все права защищены © 2024</p>
+        <div class="footer-content">
+          <div class="footer-columns">
+            <div class="footer-column footer-column-left">
+              <nav class="footer-links">
+                <div class="links-row">
+<!--                  <a href="#" class="footer-link">О компании</a>-->
+                  <button onclick="window.location.href='/'" class="footer-link">О компании</button>
+                  <button onclick="window.location.href='/products'" class="footer-link">Продукция</button>
+<!--                  <a href="#" class="footer-link">Продукция</a>-->
+                </div>
+              </nav>
+            </div>
+            <div class="footer-column footer-column-right">
+              <nav class="footer-links">
+                <div class="links-row">
+                  <button  onclick="window.location.href='/none'" class="footer-link">Прайс-лист</button>
+<!--                  <a href="#" class="footer-link">Прайс-лист</a>-->
+                  <button  onclick="window.location.href='/documentation'" class="footer-link">Документы</button>
+                  <button  onclick="window.location.href='/none'" class="footer-link">Контакты</button>
+
+<!--                  <a href="#" class="footer-link">Документы</a>-->
+<!--                  <a href="#" class="footer-link">Контакты</a>-->
+                </div>
+                <div class="social-icons">
+                    <section class="image-gallery">
+                      <img src="https://cdn.builder.io/api/v1/image/assets%2Fce95c56d116b4d5490c97905b69b5952%2F9755c2a7249247968da0f7d08d6b727c" alt="" class="main-image" loading="lazy">
+                      <div class="image-wrapper">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2Fce95c56d116b4d5490c97905b69b5952%2F80dee3e2334b4b728ee8ab318be2ee6b" alt="" class="rounded-image" loading="lazy">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2Fce95c56d116b4d5490c97905b69b5952%2F788c12c128c84c4da8914f7ecd76cf8b" alt="" class="wide-image" loading="lazy">
+                </div>
+                    </section>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;600;&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="static/header.css">
+        <script>
+    function scrollToElem(elem){
+		    document.getElementsByClassName(elem)[0].scrollIntoView({
+		        behavior: 'smooth'
+		    });
+		}
+</script>
+</head>
+<body>
+   <header class="hero-section">
+           <div class="header">
+        <div class="logo-container">
+          <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bb6508a9d37bbeca697e757559f00ff3326c419fe87c67aebaac2fa5b3e00ef?placeholderIfAbsent=true&apiKey=ce95c56d116b4d5490c97905b69b5952" alt="Company logo" class="logo" />
+          <div class="logo-text" onclick="window.location.href='/'" >
+            <h1>FISH TO BUSINESS</h1>
+            <h6>рыба для бизнеса</h6>
+         </div>
+<!--            <div class="iner-fings">-->
+                 <div class="phone">
+                     <img src="static/phone.svg">
+                     <h3>+7 999 123 45 67</h3>
+                     <p>v</p>
+                 </div>
+                    <div class="location">
+                        <img src="static/location.svg">
+                        <p style="  text-decoration: underline dashed ;">Москва</p>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <img src="static/package.svg">
+                        <p onclick="window.location.href='/category'" class="roznicny-magazin">Розничный магазин</p>
+                    </div>
+
+         <button onclick="togglePopup()" class="become-client-button">Стать клиентом</button>
+
+
+        </div>
+           </div>
+      </header>
+    <div class="line-up-navigation"></div>
+    <div class="navigation">
+        {% if is_home %}
+            <button onclick="scrollToElem('about-section')" class="navigation-button">О компании</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button">Продукция</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button">Прайс-лист</button>
+            <button onclick="window.location.href='/documentation'" class="navigation-button">Документы</button>
+            <button onclick="scrollToElem('card-section')" class="navigation-button">Контакты</button>
+        {% else %}
+            <button onclick="window.location.href='/'" class="navigation-button">О компании</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button">Продукция</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button">Прайс-лист</button>
+            <button onclick="window.location.href='/documentation'" class="navigation-button">Документы</button>
+            <button onclick="scrollToElem('card-section')" class="navigation-button">Контакты</button>
+        {% endif %}
+
+
+
+        <!--        <button onclick="window.location.href='/products'" class="navigation-button">Прайс-лист</button>-->
+<!--        <button onclick="window.location.href='/products'" class="navigation-button">Продукция</button>-->
+<!--        <button onclick="window.location.href='/'" class="navigation-button">О компании</button>-->
+
+    </div>
+</body>
+</html>

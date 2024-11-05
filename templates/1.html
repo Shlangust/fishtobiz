@@ -1,0 +1,51 @@
+<style>
+.contact-section { background-color: #000; display: flex; flex-direction: column; overflow: hidden; padding: 48px 0 130px 79px; }
+.phone-number-primary { color: #fff; text-transform: uppercase; font: 600 48px Montserrat, sans-serif; }
+.address-text { color: #fff; margin-top: 18px; font: 500 24px Montserrat, sans-serif; }
+.content-wrapper { z-index: 10; margin-top: 41px; }
+.two-column-layout { gap: 20px; display: flex; }
+.info-column { display: flex; flex-direction: column; width: 33%; }
+.order-section { z-index: 10; display: flex; width: 100%; flex-direction: column; color: #fff; text-transform: uppercase; margin: 110px -181px 0 0; font: 600 48px Montserrat, sans-serif; }
+.contact-group { display: flex; margin-top: 18px; align-items: center; gap: 11px; flex-wrap: wrap; }
+.contact-icon { aspect-ratio: 1; object-fit: contain; object-position: center; width: 47px; }
+.phone-number-secondary { flex-grow: 1; width: 377px; }
+.image-column { display: flex; flex-direction: column; width: 67%; margin-left: 20px; }
+.bottom-image { border-radius: 35px; background-color: #ff0000; align-self: center; width: 1261px; max-width: 100%; height: 524px; }
+
+@media (max-width: 991px) {
+    .contact-section { padding: 0 0 100px 20px; }
+    .phone-number-primary { font-size: 40px; }
+    .address-text { max-width: 100%; }
+    .content-wrapper { max-width: 100%; margin-top: 40px; }
+    .two-column-layout { flex-direction: column; align-items: stretch; gap: 0; }
+    .info-column { width: 100%; }
+    .order-section { max-width: 100%; margin-top: 40px; font-size: 40px; }
+    .phone-number-secondary { font-size: 40px; }
+
+    .main-image { max-width: 100%; }
+}
+</style>
+
+<section class="contact-section">
+    <h2 class="phone-number-primary">8 800 700 27 03</h2>
+    <p class="address-text">Склад: МО., пос. Родники. ул. Трудовая 10</p>
+    
+    <div class="content-wrapper-card">
+        <div class="two-column-layout">
+            <div class="info-column">
+                <div class="order-section">
+                    <h3>ПРИём заказов</h3>
+                    <div class="contact-group">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f09b9c6efc3421ec905ea7529f243eb7cd831efc0ebd5e50c26db4efa90de393?placeholderIfAbsent=true&apiKey=99f98d016e5c49dfaa02813b71e2f4c2" alt="" class="contact-icon" />
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5f530b839689b1303c8787d7f72d5e807995c6ff26055b801da1fcdffba92e83?placeholderIfAbsent=true&apiKey=99f98d016e5c49dfaa02813b71e2f4c2" alt="" class="contact-icon" />
+                        <p class="phone-number-secondary">8 993 700 70 87</p>
+                    </div>
+                </div>
+            </div>
+                <img src="static/salmon-alive.png"  class="main-image" />
+
+        </div>
+    </div>
+    
+    <div class="bottom-image" role="presentation"></div>
+</section>

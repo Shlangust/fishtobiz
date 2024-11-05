@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;600;&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="static/header.css">
+    <script>
+
+</script>
+</head>
+<body>
+
+
+   <header class="hero-section">
+           <div class="header">
+        <div class="logo-container">
+          <img  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bb6508a9d37bbeca697e757559f00ff3326c419fe87c67aebaac2fa5b3e00ef?placeholderIfAbsent=true&apiKey=ce95c56d116b4d5490c97905b69b5952" alt="Company logo" class="logo" />
+          <div class="logo-text" onclick="window.location.href='/'">
+            <h1>FISH TO BUSINESS</h1>
+            <h6>рыба для бизнеса</h6>
+         </div>
+
+<!--          <div class="search-products">-->
+<!--            <a class="search-product">Найти нужный товар</a>-->
+<!--            <div style="display:flex;padding-right:7px;">-->
+<!--                <div style="margin-left:3px;background-color:#8F9996;height:35px;width:1px;">-->
+<!--            </div>-->
+<!--            <img src="static/btn find.svg">-->
+<!--              </div>-->
+<!--          </div>-->
+
+
+                <form class="search-products">
+                     <input class="search-product" placeholder="Найти нужный товар" type="text" id="fname" name="fname">
+                     <div style="display:flex;padding-right:7px;">
+                        <div style="margin-left:3px;background-color:#8F9996;height:35px;width:1px;">
+                        </div>
+                        <img src="static/btn find.svg">
+                    </div>
+
+                </form>
+
+
+
+
+
+        {% if is_cat %}
+            <button onclick="filterPopup()" style="background:0;border:0;"><img src="static/filters.svg"></button>
+
+        {% endif %}
+
+<!--            <div class="cart">-->
+<!--                <img src="static/empty-cart.svg">-->
+<!--                <p>Товаров:</p>-->
+<!--                <h6>1</h6>-->
+<!--                <h3>999 999 ₽</h3>-->
+<!--            </div>-->
+            <button onclick="window.location.href='/cart'" class="cart">
+                <img src="static/empty-cart.svg">
+                <p>Товаров:</p>
+                <h6>1</h6>
+                <h3>999 999 ₽</h3>
+            </button>
+
+        </div>
+           </div>
+
+      </header>
+
+
+    <div id="filter" class="popup" style="display: none;">
+          <div style="margin-left:25%;margin-top:20px;">{% include 'test.html' %}</div>
+
+        </div>
+
+  <script>
+        function filterPopup() {
+            const filter = document.getElementById('filter');
+            filter.style.display = filter.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+
+</body>
+</html>

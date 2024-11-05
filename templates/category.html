@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color:#E6F1ED;
+        }
+        .gallery-row {
+
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;`
+        margin-top: 30px;
+        margin-left: 80px;
+      }
+      .gallery-row{
+            padding-top: 100px;
+      }
+        .product-example{
+        background-color:#E1C063;
+        width:596px;
+        height:401px;
+        border-radius:40px;}
+        .product-name{
+            font-family:  Roboto, sans-serif;
+            width:550px;
+            font-size:36px;
+            font-weight:400;
+            color:#BA7355;
+        }
+    </style>
+
+</head>
+<body>
+    {% include 'header-product.html' %}
+
+<div>
+    {% if is_from == True %}
+
+        <div class="gallery-row">
+        {% for category in categorise%}
+        <div>
+        <div onclick="window.location.href='/product_{{category}}?category_name={{ category_name }}'"  class="product-example"></div>
+        <h2 class="product-name">{{category}}</h2>
+        </div>
+    {% endfor %}
+    {% else %}
+            <div class="gallery-row">
+                {% for i in goods%}
+
+                {% for j in goods[i]["goods"]%}
+                 <div>
+                 <div onclick="window.location.href='/product_{{j}}?category_name={{ i }}'"  class="product-example"></div>
+                 <h2 class="product-name">{{j}}</h2>
+                 </div>
+                {% endfor %}
+            {% endfor %}
+</div>
+    {% endif %}
+
+
+</div>
+
+    {% include 'footer.html' %}
+
+</div>
+
+</body>
+</html>

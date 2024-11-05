@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" href="static/footer.css">
+</head>
+<body>
+    <footer>
+        <img style="width: 168px;height: 168px;"src="static/logo.png">
+        <h1>FISH TO BUSINESS</h1>
+        <h6>все права защищены © 2024</h6>
+
+        <div>
+        {% if is_home %}
+            <button onclick="scrollToElem('about-section')" class="navigation-button-f">О компании</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button-f">Продукция</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button-f">Прайс-лист</button>
+            <button onclick="window.location.href='/documentation'" class="navigation-button-f">Документы</button>
+            <button onclick="scrollToElem('card-section')" class="navigation-button-f">Контакты</button>
+        {% else %}
+            <button onclick="window.location.href='/'" class="navigation-button-f">О компании</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button-f">Продукция</button>
+            <button onclick="scrollToElem('salmon-gallery')" class="navigation-button-f">Прайс-лист</button>
+            <button onclick="window.location.href='/documentation'" class="navigation-button-f">Документы</button>
+            <button onclick="scrollToElem('card-section')" class="navigation-button-f">Контакты</button>
+        {% endif %}
+
+        </div>
+        <div class="social">
+            <a href="https://dzen.ru/"><img  src="static/dzen.png"></a>
+            <a href="https://vk.com/"><img src="static/vk.png"></a>
+            <a href="https://web.telegram.org/"><img src="static/tg.png"></a>
+        </div>
+
+  </footer>
+</body>
+</html>

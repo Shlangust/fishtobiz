@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Всплывающее окно</title>
+  <style>
+
+.order-form-popup {
+  background-color: #fff;
+  border-radius: 23px;
+  max-width: 868px;
+  padding: 14px 0 93px;
+}
+
+.order-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 30px 30px;
+  flex-wrap: wrap;
+}
+
+.order-form-title {
+  font: 400 32px Roboto, sans-serif;
+  color: #000;
+  margin: 14px 0 9px;
+}
+
+.required-fields-note {
+  font: 100 14px Roboto, sans-serif;
+  color: #000;
+}
+
+.close-button {
+  font: 100 24px Roboto, sans-serif;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.brand-section {
+  display: flex;
+  gap: 17px;
+  margin: 0 0 60px 39px;
+  font: 600 24px Montserrat, sans-serif;
+  color: #000;
+}
+
+.brand-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.form-content {
+  padding: 0 41px;
+  font-family: Roboto, sans-serif;
+}
+
+.form-row {
+  display: flex;
+  gap: 44px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-label {
+  display: block;
+  color: #8f9996;
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 11px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 25px 17px;
+  border: 1px solid #ba7355;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form-select {
+  width: 100%;
+  padding: 25px 20px;
+  border: 1px solid #ba7355;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 300;
+  appearance: none;
+  background: url('https://cdn.builder.io/api/v1/image/assets/TEMP/51c6add8c2be98553ec392508c1409ac8759279b287a7781f86fc70d0c29fdb5?placeholderIfAbsent=true&apiKey=99f98d016e5c49dfaa02813b71e2f4c2') no-repeat right 20px center;
+  background-size: 15px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 25px 17px;
+  border: 1px solid #ba7355;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 100;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 65px;
+}
+
+.submit-button {
+  background-color: #ba7355;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 11px 70px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.terms-agreement {
+  color: #000;
+  font-size: 10px;
+  font-weight: 400;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.terms-link {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #ba7355;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.required {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .order-form-popup {
+    padding: 14px 20px 93px;
+  }
+
+  .order-form-header {
+    margin: 0 10px 30px;
+  }
+
+  .brand-section {
+    margin-left: 10px;
+  }
+
+  .form-content {
+    padding: 0 20px;
+  }
+
+  .form-row {
+    gap: 20px;
+  }
+
+  .submit-button {
+    padding: 11px 20px;
+  }
+}
+  </style>
+</head>
+<body>
+<div class="pop-up-content">
+  <section class="order-form-popup" id="">
+    <header class="order-form-header">
+      <div>
+        <h2 class="order-form-title">Оформление заказа</h2>
+        <p class="required-fields-note">Звёздочкой "<span class="required">*</span>" помечены обязательные для заполнения поля</p>
+      </div>
+      <button class="close-button" aria-label="Закрыть" onclick="togglePopup()">х</button>
+    </header>
+
+    <div class="brand-section">
+      <img src="static/logo.png" alt="Fish to Business logo" class="brand-logo">
+      <span>FISH TO BUSINESS</span>
+    </div>
+
+    <form class="form-content">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone" class="form-label">Контактный телефон <span class="required">*</span></label>
+          <input type="tel" id="phone" class="form-input" placeholder="Введите номер телефона" required>
+        </div>
+        <div class="form-group">
+          <label for="delivery-type" class="form-label">Тип доставки <span class="required">*</span></label>
+          <select id="delivery-type" class="form-select" required>
+            <option value="self">Самовывоз</option>
+            <option value="dilivery">Доставка</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment" class="form-label">Комментарий к заказу</label>
+        <textarea id="comment" class="form-textarea" placeholder="При необходимости добавьте комментарий к заказу ( не обязательно )"></textarea>
+      </div>
+
+      <footer class="form-footer">
+        <button type="submit" class="submit-button">Оформить заказ</button>
+        <p class="terms-agreement">
+          Подтверждая заказ, я соглашаюсь с условиями <a href="#" class="terms-link">пользовательского соглашения</a>
+        </p>
+      </footer>
+    </form>
+  </section>
+</div>
+</body>
+</html>

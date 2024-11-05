@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="static\cart.css">
+
+</head>
+
+<body>
+    {% include 'header-product.html' %}
+<section class="cart-section">
+  <!-- Header Section -->
+  <div class="cart-header">
+    <h1 class="cart-title">Корзина <span class="added-items">добавлено 3 товара</span></h1>
+    <button class="clear-cart-btn">Очистить корзину</button>
+  </div>
+
+  <div class="cart-item-container">
+  <article class="cart-item">
+    <div class="cart-item-content">
+      <div class="item-details">
+        <div class="item-name-container">
+          <button class="delete-icon" style="border:0;background:0;" aria-label="Remove item">
+            <img loading="lazy" src="static/bin.svg" alt="Delete">
+          </button>
+          <h2 class="item-name">Наименование продукции в одну строку</h2>
+        </div>
+      </div>
+      <div class="item-price-container">
+        <div class="item-price-details">
+          <span class="item-price">999₽</span>
+          <div class="quantity-selector">
+            <button class="quantity-decrease">−</button>
+            <p style="color:#8F9996;">|</p>
+            <span class="quantity">1</span>
+            <p style="color:#8F9996;">|</p>
+            <button class="quantity-increase">+</button>
+          </div>
+          <span class="item-total-price">999₽</span>
+        </div>
+      </div>
+    </div>
+
+  </article>
+    <article class="cart-item">
+    <div class="cart-item-content">
+      <div class="item-details">
+        <div class="item-name-container">
+          <button class="delete-icon" style="border:0;background:0;" aria-label="Remove item">
+            <img loading="lazy" src="static/bin.svg" alt="Delete">
+          </button>
+          <h2 class="item-name">Наименование продукции в одну строку</h2>
+        </div>
+      </div>
+      <div class="item-price-container">
+        <div class="item-price-details">
+          <span class="item-price">999₽</span>
+          <div class="quantity-selector">
+            <button class="quantity-decrease">−</button>
+            <p style="color:#8F9996;">|</p>
+            <span class="quantity">1</span>
+            <p style="color:#8F9996;">|</p>
+            <button class="quantity-increase">+</button>
+          </div>
+          <span class="item-total-price">999₽</span>
+        </div>
+      </div>
+    </div>
+
+  </article>
+    <article class="cart-item">
+    <div class="cart-item-content">
+      <div class="item-details">
+        <div class="item-name-container">
+          <button class="delete-icon" style="border:0; background:0;" aria-label="Remove item">
+            <img loading="lazy" src="static/bin.svg" alt="Delete">
+          </button>
+          <h2 class="item-name">Наименование продукции в одну строку</h2>
+        </div>
+      </div>
+      <div class="item-price-container">
+        <div class="item-price-details">
+          <span class="item-price">999₽</span>
+          <div class="quantity-selector">
+            <button class="quantity-decrease">−</button>
+            <p style="color:#8F9996;">|</p>
+            <span class="quantity">1</span>
+            <p style="color:#8F9996;">|</p>
+            <button class="quantity-increase">+</button>
+          </div>
+          <span class="item-total-price">999₽</span>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</div>
+  <div class="line-spliter"></div>
+
+
+
+  <div style="display:flex;justify-content:center;"><div class="cart-summary-box">
+    <p class="cart-summary-details">
+      Кол-во товаров: <span class="cart-summary-detail">3</span><br /> <br />
+      Доставка: <span class="cart-summary-detail">Самовывоз</span><br /><br />
+      ИТОГО: <span class="cart-summary-detail">999₽</span>
+    </p>
+
+
+<script>
+    function showAlert() {
+        alert("Пока не доступно");
+    }
+</script>
+    <button onclick="showAlert()" class="checkout-btn">Оформить заказ</button>
+    <p class="free-delivery-note">Минимальная сумма для бесплатной доставки 10 000 ₽</p>
+  </div></div>
+
+
+</section>
+{% include 'footer.html' %}
+</body>
+</html>

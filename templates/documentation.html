@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{
+        background-color:#E6F1ED;
+        margin: 0;
+        padding: 0;}
+        p{
+        font-family: Inter, sans-serif;
+        }
+        .file-container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+    }
+
+        .pdffile{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            }
+
+
+        .pdffile-rectangle{
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        background-color:#E1C063;
+        width:82px;
+        height:82px;
+        border-radius:20px;}
+
+        .pdftext{
+        margin-left: 20px;
+        }
+
+        .pdffile-name{
+            color:#BA7355;
+            text-decoration: underline;
+            font-size: 20px
+            font-width: 400;
+        }
+        .pdffilesize{
+            color:#899496;
+            font-size: 14px;
+
+            font-width: 400;
+        }
+
+        .actions {
+            display: flex;
+
+            justify-content: flex-start;
+            margin: 118px 0px 0px 100px;
+            gap: 30px;
+        }
+
+        .btn {
+                    display: flex;
+
+
+            justify-content: center;
+            align-items: center;
+
+
+            font-family: Roboto, sans-serif;
+
+            background-color: #f6c66b;
+            color: white;
+            border: none;
+            border-radius: 19px;
+            font-size: 24px;
+            text-decoration: none;
+            width: 268px;
+            height:55px;
+            font-weight: 400;
+        }
+
+        .btn:hover {
+            background-color: #e0ac50;
+        }
+
+        .contact-btn {
+            font-family: Roboto, sans-serif;
+
+            color: #c77b29;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+          {% include 'header.html' %}
+        <div class="file-container">
+
+            <div class="pdffile">
+                <div class="pdffile-rectangle"><img style="margin-left:-7%;" src="static/pdffile-image.png"></div>
+                <div class="pdftext">
+                    <p><a class="pdffile-name" href="static/download-sample.pdf" download>Название файла.pdf</a>
+<!--                    <p class="pdffile-name">Название файла.pdf</p>-->
+                    <p class="pdffilesize">1.12232 мб</p>
+                </div>
+            </div>
+            <div class="pdffile">
+                <div class="pdffile-rectangle"><img style="margin-left:-7%;" src="static/pdffile-image.png"></div>
+                <div class="pdftext">
+                    <p><a class="pdffile-name" href="static/download-sample.pdf" download>Название файла.pdf</a>
+<!--                    <p class="pdffile-name">Название файла.pdf</p>-->
+                    <p class="pdffilesize">1.12232 мб</p>
+                </div>
+            </div>
+            <div class="pdffile">
+                <div class="pdffile-rectangle"><img style="margin-left:-7%;" src="static/pdffile-image.png"></div>
+                <div class="pdftext">
+                    <p><a class="pdffile-name" href="static/download-sample.pdf" download>Название файла.pdf</a>
+<!--                    <p class="pdffile-name">Название файла.pdf</p>-->
+                    <p class="pdffilesize">1.12232 мб</p>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+                <a href="#" class="btn">оформить заказ</a>
+                <button class="contact-btn">связаться</button>
+            </div>
+          <div style="display : flex; justify-content: center;">{% include 'footer.html' %}</div>
+
+
+
+
+</html>

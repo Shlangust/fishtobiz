@@ -1,0 +1,243 @@
+/* @font-face {
+       font-family: 'Montserrat';
+            url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+          }*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600; /* Задать допустимые веса */
+
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/RobotoFlex-VariableFont.ttf') format('truetype');
+    font-weight: 200 300 400; /* Задать допустимые веса */
+
+}
+.filter {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+
+    z-index: 1000; /* Убедитесь, что всплывающее окно сверху */
+}
+    .hero-section {
+    display: flex;
+
+    align-self: stretch;
+    position: relative;
+    z-index: 10;
+
+    height:100px;
+    width: 100%;
+
+    align-items: center;
+    /*padding: 13px 80px 210px;*/
+    padding-left: 100px;
+  }
+  
+  @media (max-width: 991px) {
+    .hero-section {
+      max-width: 100%;
+      padding: 0 20px 100px;
+    }
+  }
+
+  .header {
+    position: relative;
+    align-self: start;
+    display: flex;
+    width: 90%;
+    font-size: 24px;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+    }
+  }
+
+  .logo-container {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+  }
+
+  .logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+
+  }
+  .logo-text{
+                   cursor: pointer;
+
+    white-space: nowrap;
+    color: #323232;
+
+
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+        position: relative;
+    margin-right: 20px; /* Отступ между номером телефона и другим контентом */
+
+  }
+  .logo-text h1{
+            font-weight: 600 ;
+      font-size: 24px;
+          margin: 0; /* Убираем внешние отступы */
+
+    }
+  .logo-text h6{
+    margin: 0; /* Убираем внешние отступы */
+    font-size: 14px;
+      }
+   .phone{
+        white-space: nowrap;
+        display:flex;
+        font-family: Roboto, sans-serif;
+        font-size:24px;
+        color:#323232;
+        display: flex;
+        gap: 5px;
+        align-items:center
+        position: relative;
+        margin-right: 20px; /* Отступ между номером телефона и другим контентом */
+
+   }
+   .phone h3{
+        font-weight:400;
+
+   }
+   .phone p{
+        font-weight :100;
+
+
+   }
+   .location{
+
+
+        color: #323232;
+        font-family: Roboto, sans-serif;
+        display:flex;
+        gap: 7px;
+        font-weight: 200;
+        position: relative;
+    margin-right: 20px; /* Отступ между номером телефона и другим контентом */
+
+   }
+   .roznicny-magazin{
+           cursor: pointer;
+           white-space:nowrap;
+           color: #323232;
+           font-family: Roboto, sans-serif;
+           font-weight:200;
+           font-size:20px;
+
+   }
+
+   .become-client-button{
+        cursor:pointer;
+        width:153px;
+        height:36px;
+        color:#fff;
+        border:0px;
+        background-color:#323232;
+        border-radius:8px;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        position: relative;
+
+}
+.line-up-navigation{
+    background-color:#474747;
+    margin-left:80px;
+    height:1px;
+    width:85%;
+}
+
+.navigation{
+    margin-top:6px;
+    padding-bottom:50px;
+    margin-left:100px;
+    gap:23px;
+
+    }
+.navigation-button{
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight:300;
+    border:0;
+    background:0;
+}
+
+.search-products{
+    font-weight:200px;
+    background-color:#FFFFFF;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    margin-left:15rem;
+    width: 427px;
+    height:42px;
+
+}
+.search-product{
+    border:0;
+    width:90%;
+    font-weight:200;
+    padding-left:15px;
+    font-family: Roboto, sans-serif;
+    color: #8F9996;
+     outline: none;
+    font-weight:100;
+    font-size:16px;
+}
+
+
+.cart{
+    background-color:#fff;
+    border:0;
+    border-radius:12px;
+    height:42px;
+
+    font-family: Roboto, sans-serif;
+    display:flex;
+    align-items:center;
+
+}
+.cart p{
+    color: #000000;
+    font-size: 10px;
+    font-weight:200;
+}
+.cart h6{
+    color: #E1C063;
+    font-size: 15px;
+    font-weight:400;
+}
+.cart h3{
+    margin-left:23px;
+    color: #BA7355;
+    font-size: 15px;
+    font-weight:400;
+}
+
